@@ -1,7 +1,8 @@
 import { Space } from "antd";
 import { FaThreads, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import SocialButton from "./SocialButton";
-import { delay } from "../utils/delay";
+import ZodiacButton from "../ZodiacButton";
+import { delay } from "../../utils/delay";
 
 interface SocialLink {
   platform: string;
@@ -61,6 +62,7 @@ export default function SocialButtons({ socialLinks = defaultSocialLinks }: Soci
           onClick={() => handleSocialClick(link.platform, link.url)}
         />
       ))}
+      <ZodiacButton />
     </Space>
   );
 } 
