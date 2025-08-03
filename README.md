@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# Personal Profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal profile website built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is automatically deployed to GitHub Pages using GitHub Actions.
 
-## Expanding the ESLint configuration
+### Automatic Deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The deployment workflow (`.github/workflows/deploy.yml`) will automatically:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Build the project when you push to `main` or `master` branch
+2. Deploy the built files to GitHub Pages
+3. Make your site available at: `https://[your-username].github.io/personal-profile/`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Manual Deployment
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To manually trigger a deployment:
+
+1. Go to your repository on GitHub
+2. Navigate to **Actions** tab
+3. Select **Deploy to GitHub Pages** workflow
+4. Click **Run workflow**
+
+### Setup Requirements
+
+Before the first deployment, make sure to:
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Source: Select "GitHub Actions"
+
+2. **Grant permissions** to the workflow:
+   - Go to Settings → Actions → General
+   - Under "Workflow permissions", select "Read and write permissions"
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+
+- Yarn package manager
+
+### Installation
+
+```bash
+# Install dependencies
+yarn install
+
+# Start development server
+yarn dev
+
+# Build for production
+yarn build
+
+# Preview production build
+yarn preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+personal-profile/
+├── .github/workflows/    # GitHub Actions workflows
+├── public/              # Static assets
+├── src/                 # Source code
+├── vite.config.ts       # Vite configuration
+└── package.json         # Dependencies and scripts
+```
+
+## 🎨 Technologies Used
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Ant Design** - UI components
+- **React Icons** - Icon library
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
