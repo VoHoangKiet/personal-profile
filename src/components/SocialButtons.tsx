@@ -1,6 +1,7 @@
 import { Space } from "antd";
 import { FaThreads, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import SocialButton from "./SocialButton";
+import { delay } from "../utils/delay";
 
 interface SocialLink {
   platform: string;
@@ -39,8 +40,9 @@ const defaultSocialLinks: SocialLink[] = [
 ];
 
 export default function SocialButtons({ socialLinks = defaultSocialLinks }: SocialButtonsProps) {
-  const handleSocialClick = (platform: string, url?: string) => {
+  const handleSocialClick = async (platform: string, url?: string) => {
     if (url) {
+      await delay(500); // Wait 0.5 seconds
       window.open(url, '_blank');
     } else {
       console.log(`Navigate to ${platform}`);
