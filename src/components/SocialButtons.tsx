@@ -42,7 +42,7 @@ const defaultSocialLinks: SocialLink[] = [
 export default function SocialButtons({ socialLinks = defaultSocialLinks }: SocialButtonsProps) {
   const handleSocialClick = async (platform: string, url?: string) => {
     if (url) {
-      await delay(500); // Wait 0.5 seconds
+      await delay(800); // Wait 0.5 seconds
       window.open(url, '_blank');
     } else {
       console.log(`Navigate to ${platform}`);

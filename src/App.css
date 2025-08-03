@@ -71,7 +71,7 @@
 
   &:hover {
     color: white !important;
-    border: 1px solid #e4405f !important;
+    border: none !important;
   }
 
   &:hover svg {
@@ -109,7 +109,7 @@
 
   &:hover {
     color: white !important;
-    border: 1px solid #000000 !important;
+    border: none !important;
   }
 
   &:hover svg {

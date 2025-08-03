@@ -1,1 +1,18 @@
 @import "tailwindcss";
+.sakura {
+  pointer-events: none;
+  position: fixed;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .sakura {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+.ant-card {
+  position: relative;
+  z-index: 3;
+}
