@@ -1,0 +1,105 @@
+.gift-box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+  width: 50%;
+  margin: auto;
+}
+
+.gift-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.gift-box.bounce {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.gift-icon {
+  font-size: 32px;
+  color: #ff6b9d;
+  margin-bottom: 8px;
+}
+
+.gift-text {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.birthday-modal .ant-modal-content {
+  border-radius: 16px;
+}
+
+.birthday-modal .ant-modal-title {
+  color: white;
+  font-weight: bold;
+}
+
+.birthday-content {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.birthday-emoji {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.birthday-title {
+  color: #ff6b9d;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.birthday-message {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.birthday-footer-emoji {
+  font-size: 24px;
+  margin-top: 16px;
+} 
+.register-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://static.mocortech.com/mexc-static-resource/image/banner-gift-animate-v2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-bottom: 5px;
+  animation: header_run__nD9Fb 2s steps(35) infinite;
+}
+
+@keyframes header_run__nD9Fb {
+  0% {
+      background-position: center top 0;
+  }
+  100% {
+      background-position: center bottom 0;
+  }
+}

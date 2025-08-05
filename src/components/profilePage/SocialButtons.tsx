@@ -1,7 +1,7 @@
 import { Space } from "antd";
 import { FaThreads, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import SocialButton from "./SocialButton";
-import ZodiacButton from "../ZodiacButton";
+import GiftBox from "./GiftBox";
 import { delay } from "../../utils/delay";
 
 interface SocialLink {
@@ -52,6 +52,7 @@ export default function SocialButtons({ socialLinks = defaultSocialLinks }: Soci
 
   return (
     <Space className="!mt-6 flex w-full" direction="vertical">
+      <GiftBox />
       {socialLinks.map((link) => (
         <SocialButton
           key={link.platform}
