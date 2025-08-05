@@ -62,7 +62,7 @@ export default function SocialButtons({ socialLinks = defaultSocialLinks }: Soci
           onClick={() => handleSocialClick(link.platform, link.url)}
         />
       ))}
-      <ZodiacButton />
+      {/* <ZodiacButton /> */}
     </Space>
   );
 } 
