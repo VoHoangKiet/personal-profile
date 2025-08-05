@@ -47,6 +47,13 @@
   border: none !important;
 }
 
+/* Mobile responsive - buttons take 65% width */
+@media (max-width: 768px) {
+  .ant-btn {
+    width: 65% !important;
+  }
+}
+
 /* Zodiac button styling */
 .btn-zodiac {
   background-color: white !important;

@@ -13,6 +13,13 @@
   margin: auto;
 }
 
+/* Mobile responsive - gift box takes 65% width */
+@media (max-width: 768px) {
+  .gift-box {
+    width: 65% !important;
+  }
+}
+
 .gift-box:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
